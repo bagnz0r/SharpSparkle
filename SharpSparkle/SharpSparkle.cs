@@ -40,7 +40,7 @@ namespace SharpSparkle
         /// Windows resource named "FeedURL" of type "APPCAST".
         /// </summary>
         /// <param name="url">Appcast URL</param>
-        [DllImport("WinSparkle.dll", EntryPoint = "set_appcast_url")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_appcast_url")]
         public static extern void SetAppcastUrl([MarshalAs(UnmanagedType.LPStr)] string url);
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace SharpSparkle
         /// <param name="companyName">Your company name</param>
         /// <param name="appName">Application name</param>
         /// <param name="appVersion">Application version</param>
-        [DllImport("WinSparkle.dll", EntryPoint = "set_app_details")]
-        public static extern void SetAppcastUrl([MarshalAs(UnmanagedType.LPWStr)] string companyName, 
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_app_details")]
+        public static extern void SetAppDetails([MarshalAs(UnmanagedType.LPWStr)] string companyName,
             [MarshalAs(UnmanagedType.LPWStr)] string appName,
             [MarshalAs(UnmanagedType.LPWStr)] string appVersion);
 
@@ -70,7 +70,7 @@ namespace SharpSparkle
         /// @endcode
         /// </summary>
         /// <param name="path"></param>
-        [DllImport("WinSparkle.dll", EntryPoint = "set_registry_path")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_registry_path")]
         public static extern void SetRegistryPath([MarshalAs(UnmanagedType.LPStr)] string path);
 
     }
