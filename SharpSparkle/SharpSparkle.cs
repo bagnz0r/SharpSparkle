@@ -17,19 +17,19 @@ namespace SharpSparkle
         /// <summary>
         /// Initializes the Sparkle library.
         /// </summary>
-        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_init")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_init", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Init();
 
         /// <summary>
         /// Cleans up after the Sparkle library.
         /// </summary>
-        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_cleanup")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_cleanup", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Cleanup();
 
         /// <summary>
         /// Manually forces Sparkle to check for updates.
         /// </summary>
-        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_check_update_with_ui")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_check_update_with_ui", CallingConvention = CallingConvention.Cdecl)]
         public static extern void CheckUpdateWithUi();
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace SharpSparkle
         /// Windows resource named "FeedURL" of type "APPCAST".
         /// </summary>
         /// <param name="url">Appcast URL</param>
-        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_appcast_url")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_appcast_url", CallingConvention = CallingConvention.Cdecl)]
         public static extern void SetAppcastUrl([MarshalAs(UnmanagedType.LPStr)] string url);
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace SharpSparkle
         /// <param name="companyName">Your company name</param>
         /// <param name="appName">Application name</param>
         /// <param name="appVersion">Application version</param>
-        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_app_details")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_app_details", CallingConvention = CallingConvention.Cdecl)]
         public static extern void SetAppDetails([MarshalAs(UnmanagedType.LPWStr)] string companyName,
             [MarshalAs(UnmanagedType.LPWStr)] string appName,
             [MarshalAs(UnmanagedType.LPWStr)] string appVersion);
@@ -70,7 +70,7 @@ namespace SharpSparkle
         /// @endcode
         /// </summary>
         /// <param name="path"></param>
-        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_registry_path")]
+        [DllImport("WinSparkle.dll", EntryPoint = "win_sparkle_set_registry_path", CallingConvention = CallingConvention.Cdecl)]
         public static extern void SetRegistryPath([MarshalAs(UnmanagedType.LPStr)] string path);
 
     }
